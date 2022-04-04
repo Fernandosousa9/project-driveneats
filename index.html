@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivenEats</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="topo">
+        <h1>DrivenEats</h1>
+        <h2>Mais rápido que os correios</h2>
+    </div>
+    <div class="conteudo">
+        <h3>Primeiro, seu prato</h3>
+        <div class="prato">
+            <div id="frango" class="produto" onclick="selecionarPrato(this)">
+                <img src="images/frango_yin_yang.png" alt="Frango yin-yang">
+                <h4>Frango Yin-Yang</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <p class="preco">R$ 19,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div id="carne" class="produto" onclick="selecionarPrato(this)">
+                <img src="images/carne-salada.jpg" alt="Carne e salada">
+                <h4>Carne e salada</h4>
+                <p>Também tem batata</p>
+                <p class="preco">R$ 24,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div id="peixe" class="produto" onclick="selecionarPrato(this)">
+                <img src="images/peixada.jpg" alt="Peixada com camarão">
+                <h4>Peixada</h4>
+                <p>Além de batatas, tem camarão</p>
+                <p class="preco">R$ 21,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div id="vegetariano" class="produto" onclick="selecionarPrato(this)">
+                <img src="images/vegetariano.webp" alt="Salada Mista">
+                <h4>vegetariano</h4>
+                <p>Um prato vegetariano</p>
+                <p class="preco">R$ 22,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+        </div>
+        <h3>Agora, sua bebida</h3>
+        <div class="bebida">
+            <div id="refri" class="produto" onclick="selecionarBebida(this)">
+                <img src="images/coquinha_gelada.png" alt="Refrigerante">
+                <h4>Coquinha gelada</h4>
+                <p>latinha de 350ml</p>
+                <p class="preco">R$ 4,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div id="suco" class="produto" onclick="selecionarBebida(this)">
+                <img src="images/suco.jpg" alt="Suco">
+                <h4>Suco</h4>
+                <p>Copo com 300ml</p>
+                <p class="preco">R$ 6,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div id="agua" class="produto" onclick="selecionarBebida(this)">
+                <img src="images/agua.jpg" alt="Agua">
+                <h4>Água</h4>
+                <p>Vem com 250ml</p>
+                <p class="preco">R$ 2,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+        </div>
+        <h3>Por fim, sua sobremesa</h3>
+        <div class="sobremesa">
+            <div id="pudim" class="produto" onclick="selecionarSobremesa(this)">
+                <img src="images/pudim.png" alt="Pudim">
+                <h4>Pudim</h4>
+                <p>Um lindo pudim</p>
+                <p class="preco">R$ 4,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div id="sorvete" class="produto" onclick="selecionarSobremesa(this)">
+                <img src="images/sorvete.jpg" alt="Sorvete">
+                <h4>Sorvete</h4>
+                <p>Se pensar muito derrete</p>
+                <p class="preco">R$ 4,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div id="torta" class="produto" onclick="selecionarSobremesa(this)">
+                <img src="images/torta-fria.jpg" alt="Torta fria">
+                <h4>Torta</h4>
+                <p>Um belo pedaço de torta fria</p>
+                <p class="preco">R$ 7,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <div class="final">
+        <div class="botao-finalizar" onclick="finalizarPedido()">
+            <p>Selecione os 3 itens para fechar o pedido</p>
+        </div>
+        <div class="confirmar escondida" onclick="finalizarPedido()">Fechar Pedido</div>
+    </div>
+
+    <div class="fundo escondido">
+        <div class="pedido">
+            <div class="produtos">
+                <span>Confirme seu pedido:</span>
+                <div class="prato-esc"><p class="nome">Nome prato</p> <p class="price"></p></div>
+                <div class="bebida-esc"><p class="nome">Nome da bebida</p> <p class="price"></p></div>
+                <div class="sobremesa-esc"><p class="nome">Nome da sobremesa</p> <p class="price"></p></div>
+                <div class="total"><p class="nome">TOTAL</p> <p class="price"></p></div>
+            </div>
+            <div class="aceitar" onclick="confirmar()">Está tudo certo, pode confirmar</div>
+            <div class="cancelar" onclick="cancelar()">cancelar</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

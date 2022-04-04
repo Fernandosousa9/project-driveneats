@@ -99,6 +99,7 @@ function finalizarPedido() {
         alert("Você deve marcar todas as opções");
     }
 
+    
     document.querySelector(".prato-esc .nome").innerHTML = `${document.querySelector(".selecionado h4").innerHTML}`;
     document.querySelector(".prato-esc .price").innerHTML = `${document.querySelector(".selecionado .preco").innerHTML.replace("R$ ", '')}`;
 
@@ -107,13 +108,15 @@ function finalizarPedido() {
 
     document.querySelector(".sobremesa-esc .nome").innerHTML = `${document.querySelector(".selecionadoc h4").innerHTML}`;
     document.querySelector(".sobremesa-esc .price").innerHTML = `${document.querySelector(".selecionadoc .preco").innerHTML.replace("R$ ", '')}`;
+    
+    document.querySelector(".total .price").innerHTML = valor.toFixed(2).replace(".",",");
 }
 
 function confirmar() {
     let mensagem = "Olá, gostaria de fazer o pedido: \n" + "- Prato: " + document.querySelector(".selecionado h4").innerHTML + 
     "\n- Bebida: " + document.querySelector(".selecionadob h4").innerHTML + 
     "\n- Sobremesa: " + document.querySelector(".selecionadoc h4").innerHTML + 
-    "\nTotal: R$ " + valor.toFixed(2).replace(".",",") + "\n" + nome + "\n" + endereco;
+    "\nTotal: R$ " + valor.toFixed(2).replace(".",",");
 
     let encode = encodeURIComponent(mensagem);
     window.open("https://wa.me/+5598984060181?text= " + encode);
