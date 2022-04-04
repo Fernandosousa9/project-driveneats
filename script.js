@@ -92,7 +92,7 @@ function finalizarPedido() {
         document.querySelector(".botao-finalizar").classList.add("escondido");
         document.querySelector(".confirmar").classList.remove("escondido");
         valor = valor1+valor2+valor3;
-        nome = "\nNome: " + prompt("Digite seu nome");
+        nome = "\n\nNome: " + prompt("Digite seu nome");
         endereco = "\nEndereço: " + prompt("Digite seu endereço");
         pedido.classList.remove("escondido");
     }else {
@@ -116,7 +116,7 @@ function confirmar() {
     let mensagem = "Olá, gostaria de fazer o pedido: \n" + "- Prato: " + document.querySelector(".selecionado h4").innerHTML + 
     "\n- Bebida: " + document.querySelector(".selecionadob h4").innerHTML + 
     "\n- Sobremesa: " + document.querySelector(".selecionadoc h4").innerHTML + 
-    "\nTotal: R$ " + valor.toFixed(2).replace(".",",");
+    "\nTotal: R$ " + valor.toFixed(2).replace(".",",") + nome + endereco;
 
     let encode = encodeURIComponent(mensagem);
     window.open("https://wa.me/+5598984060181?text= " + encode);
