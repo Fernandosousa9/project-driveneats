@@ -140,7 +140,7 @@ p {
 
 .botao-finalizar {
     background-color: #CBCBCB;
-    width: 364px;
+    width: 350px;
     height: auto;
     display: flex;
     justify-content: center;
@@ -161,7 +161,7 @@ p {
 
 .confirmar {
     background-color: #32B72F;
-    width: 364px;
+    width: 350px;
     height: 60px;
     color: #FFFFFF;
     font-style: normal;
@@ -199,8 +199,8 @@ p {
   
   .pedido {
     background-color: #50d074;
-    width: 377px;
-    height: 353px;
+    width: 357px;
+    height: 350px;
     position: absolute;
     top: 0;
     bottom: 0;
